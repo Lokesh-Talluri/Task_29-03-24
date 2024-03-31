@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 29-03-24</title>
+    <style>
+      .md {
+        display: flex;
+        gap: 10px;
+      }
+      .mda,
+      .mdb,
+      .mdc {
+        border: 2px solid black;
+        height: 560px;
+        width: 30%;
+        text-align: center;
+        /* background-color: black; */
+      }
+      .mda .md2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+      }
+      img:hover {
+        flex-grow: 1;
+        height: 250px;
+        transition-property: flex-grow, height;
+        transition-duration: 2s;
+      }
+      .mdb .md2 {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        /* margin: 20px; */
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        animation-name: ball;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes ball {
+        0% {
+          background-color: red;
+          /* border-radius: 10px; */
+          transform: translate(130px, 0px);
+        }
+        /* 50% {
+          background-color: orange;
+          border-radius: 50px;
+          transform: translate(0px, 220px);
+        } */
+        100% {
+          background-color: green;
+          border-radius: 50px;
+          transform: translate(130px, 380px);
+        }
+      }
+      .mdc .md2 {
+        height: 100px;
+        width: 100px;
+        margin-left: 50px;
+        margin-top: 50px;
+        border: 10px solid;
+        border-radius: 100%;
+        border-top-color: black;
+        border-bottom-color: black;
+        border-right-color: white;
+        animation-name: loader;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+      }
+      @keyframes loader {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="md">
+      <div class="mda">
+        <div class="md1">
+          <h1>Image Gallery</h1>
+        </div>
+        <div class="md2">
+          <img src="../Assets/car.png" />
+          <img src="../Assets/beach.jpg" />
+          <img src="../Assets/car2.jpg" />
+          <img src="../Assets/sunrise.jpeg" />
+          <img src="../Assets/chicken curry.webp" />
+          <img src="../Assets/prawn curry.jpg" />
+          <img src="../Assets/fry piece biryani.jpg" />
+          <img src="../Assets/dum biryani.jpg" />
+          <img src="../Assets/car.png" />
+        </div>
+      </div>
+      <div class="mdb">
+        <div class="md1"><h1>Bouncing Ball</h1></div>
+        <div class="md2"></div>
+      </div>
+      <div class="mdc">
+        <div class="md1"><h1>Loader</h1></div>
+        <div class="md2"></div>
+      </div>
+    </div>
+  </body>
+</html>
